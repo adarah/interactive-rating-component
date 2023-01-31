@@ -1,15 +1,15 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react";
 
 interface Props {
-    children?: ReactNode
+  children?: ReactNode;
 }
 
 const Card: React.FC<Props> = (props) => {
-    return (
-        <div className="bg-darkerblue rounded-xl px-6 py-8 text-lightgrey w-[415px] h-[415px]">
-            {props.children}
-        </div>
-    )
-}
+  return (
+    <div className="h-[415px] w-[415px] rounded-xl bg-darkerblue px-6 py-8 text-lightgrey">
+      {props.children}
+    </div>
+  );
+};
 
-export default Card
+export default Card;

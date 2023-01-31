@@ -1,11 +1,11 @@
-import { type NextPage } from "next"
-import Head from "next/head"
+import { type NextPage } from "next";
+import Head from "next/head";
 import { useState } from "react";
 import RatingCard from "../components/RatingCard";
 import ThankYouCard from "../components/ThankYouCard";
 
 const Home: NextPage = () => {
-  const [score, setScore] = useState<string>()
+  const [score, setScore] = useState<string>();
   return (
     <>
       <Head>
@@ -14,9 +14,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-verydarkblue h-screen w-full flex justify-center items-center">
+      <main className="flex h-screen w-full items-center justify-center bg-verydarkblue">
         <section>
-          {!score ? <RatingCard setScore={(s) => setScore(s)} /> : <ThankYouCard score={score} />}
+          {!score ? (
+            <RatingCard setScore={(s) => setScore(s)} />
+          ) : (
+            <ThankYouCard score={score} />
+          )}
         </section>
       </main>
     </>
