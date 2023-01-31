@@ -16,10 +16,10 @@ const RatingCard = ({ setScore }: Props) => {
                 onSubmit={handleSubmit(data => setScore(data.score))}
             >
                 <figure className="bg-darkblue rounded-full p-0 w-10 h-10 flex justify-center items-center">
-                    <Image src="images/icon-star.svg" alt="" width={15} height={15} className="w-auto h-auto" />
+                    <Image src="images/icon-star.svg" alt="" width={15} height={15} className="w-4 h-4" />
                 </figure>
-                <h1 className="text-white text-xl font-bold">How did we do?</h1>
-                <p>
+                <h1 className="text-white text-2xl font-bold">How did we do?</h1>
+                <p className='text-lg'>
                     Please let us know how we did with your support request. All feedback is appreciated
                     to help us improve our offering!
                 </p>
