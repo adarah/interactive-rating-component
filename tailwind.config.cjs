@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -9,12 +11,14 @@ module.exports = {
         lightgrey: 'hsl(217, 12%, 63%)',
         mediumgrey: 'hsl(216, 12%, 54%)',
         darkblue: 'hsl(213, 19%, 18%)',
-        verydarkblue: 'hsl(216, 12%, 8%)'
+        darkerblue: '#171e28',
+        verydarkblue: 'hsl(216, 12%, 8%)',
       },
       fontSize: {
         default: '15px'
       }
     },
   },
-  plugins: [],
+  plugins: [plugin(({addVariant}) => addVariant('checked', '&[data-state="checked"]'))],
 };
+
