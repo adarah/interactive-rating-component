@@ -14,7 +14,7 @@ const RatingCard = ({ setScore }: Props) => {
     <Card>
       <form
         className="flex h-full flex-col justify-between"
-        onSubmit={() => handleSubmit((data) => setScore(data.score))}
+        onSubmit={handleSubmit((data) => setScore(data.score))}
       >
         <figure className="flex h-10 w-10 items-center justify-center rounded-full bg-darkblue p-0">
           <Image
