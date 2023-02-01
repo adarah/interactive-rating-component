@@ -16,7 +16,7 @@ const RatingCard = ({ setScore }: Props) => {
         className="flex h-full flex-col justify-between"
         onSubmit={handleSubmit((data) => setScore(data.score))}
       >
-        <figure className="flex h-11 w-11 items-center justify-center rounded-full bg-darkblue p-0">
+        <figure className="flex h-11 w-11 items-center justify-center rounded-full bg-darkblue">
           <Image
             src="images/icon-star.svg"
             alt=""
@@ -26,7 +26,7 @@ const RatingCard = ({ setScore }: Props) => {
           />
         </figure>
         <div>
-          <h1 className="text-2xl font-bold text-white">How did we do?</h1>
+          <h1 className="text-2xl font-bold text-white mb-2">How did we do?</h1>
           <p className="text-md">
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
@@ -38,7 +38,7 @@ const RatingCard = ({ setScore }: Props) => {
           render={({ field }) => <ScoreGroup field={field} />}
         />
 
-        <button className="h-11 w-full rounded-full bg-primary font-bold uppercase text-white transition-colors hover:bg-white hover:text-primary">
+        <button className="h-11 w-full rounded-full bg-primary uppercase text-white transition-colors hover:bg-white hover:text-primary">
           Submit
         </button>
       </form>
@@ -68,7 +68,7 @@ const ScoreGroup = ({
           key={n}
           value={n}
           id={`r${n}`}
-          className="h-12 w-12 rounded-full bg-darkblue transition-colors hover:bg-lightgrey hover:text-white checked:bg-primary checked:text-white"
+          className="h-14 w-14 rounded-full bg-darkblue transition-colors hover:bg-lightgrey hover:text-white checked:bg-primary checked:text-white"
         >
           <label htmlFor={`r${n}`}>{n}</label>
         </RadioGroup.Item>
