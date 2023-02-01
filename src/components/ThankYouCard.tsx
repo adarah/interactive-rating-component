@@ -23,7 +23,7 @@ const ThankYouCard = ({ score }: Props) => {
 
         <p className="w-96 text-center text-lg text-lightgrey">
           We appreciate you taking the time to give a rating. If you ever need
-          more support, don't hesitate to get in touch!
+          more support, don&apos;t hesitate to get in touch!
         </p>
       </div>
     </Card>
