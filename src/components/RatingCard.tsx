@@ -1,20 +1,20 @@
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import Image from "next/image";
+import type { ControllerRenderProps } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import Card from "./Card";
-import type { ControllerRenderProps, FieldValues } from "react-hook-form";
-import { useForm, Controller } from "react-hook-form";
 
 export interface Props {
   setScore: (s: string) => void;
 }
 
 const RatingCard = ({ setScore }: Props) => {
-  const { control, handleSubmit } = useForm();
+  const { control, handleSubmit } = useForm<{ score: string }>();
   return (
     <Card>
       <form
         className="flex h-full flex-col justify-between"
-        onSubmit={handleSubmit((data) => setScore(data.score))}
+        onSubmit={() => handleSubmit((data) => setScore(data.score))}
       >
         <figure className="flex h-10 w-10 items-center justify-center rounded-full bg-darkblue p-0">
           <Image
@@ -47,7 +47,7 @@ const RatingCard = ({ setScore }: Props) => {
 export default RatingCard;
 
 interface ScoreGroupProps {
-  field: ControllerRenderProps<FieldValues, "score">;
+  field: ControllerRenderProps<{ score: string }, "score">;
 }
 const ScoreGroup = ({
   field: { name, value, onChange, onBlur, ref },
