@@ -16,7 +16,7 @@ const RatingCard = ({ setScore }: Props) => {
         className="flex h-full flex-col justify-between"
         onSubmit={handleSubmit((data) => setScore(data.score))}
       >
-        <figure className="flex h-10 w-10 items-center justify-center rounded-full bg-darkblue p-0">
+        <figure className="flex h-11 w-11 items-center justify-center rounded-full bg-darkblue p-0">
           <Image
             src="images/icon-star.svg"
             alt=""
@@ -25,11 +25,13 @@ const RatingCard = ({ setScore }: Props) => {
             className="h-4 w-4"
           />
         </figure>
-        <h1 className="text-2xl font-bold text-white">How did we do?</h1>
-        <p className="text-lg">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
+        <div>
+          <h1 className="text-2xl font-bold text-white">How did we do?</h1>
+          <p className="text-md">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
         <Controller
           name="score"
           control={control}
