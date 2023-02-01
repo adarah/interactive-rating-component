@@ -26,7 +26,7 @@ const RatingCard = ({ setScore }: Props) => {
           />
         </figure>
         <div>
-          <h1 className="text-2xl font-bold text-white mb-2">How did we do?</h1>
+          <h1 className="mb-2 text-2xl font-bold text-white">How did we do?</h1>
           <p className="text-md">
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
@@ -38,7 +38,7 @@ const RatingCard = ({ setScore }: Props) => {
           render={({ field }) => <ScoreGroup field={field} />}
         />
 
-        <button className="h-11 w-full rounded-full bg-primary uppercase text-white transition-colors hover:bg-white hover:text-primary">
+        <button className="h-11 w-full rounded-full bg-primary text-lg uppercase text-white transition-colors hover:bg-white hover:text-primary">
           Submit
         </button>
       </form>
